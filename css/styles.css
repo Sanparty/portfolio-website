@@ -12,7 +12,9 @@ Secondary Color: grey;
 	--text-color: #483D8B;
 	--background-color: #ffffff;
 	--primary-color-lighter: lightblue;
+	--primary-color-darker: #005f8f;
 	--secondary-color-lighter: lightgray;
+	--secondary-color-lightest: #F5F5F5;
 	--button-text-color:  white;
 	--button-border-radius: 10px;
 	--responsive-margin-top: 235px;
@@ -255,6 +257,30 @@ input[type="submit"]:hover, input[type=submit]:focus {
 	}
 }
 
+/* responsive styling for work grid */
+@media all and (max-width: 500px) {
+	.grid {
+		grid-template-columns: 1fr;
+	}
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+	.grid {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+@media all and (max-width:  750px){
+	.grid {
+		grid-gap:  10px;
+	}
+	.grid__item:last-child {
+		grid-column: auto / auto;
+		grid-row:  auto / auto;
+	}
+	h3 {
+		font-size:  20px;
+	}
+}
+
 .about {
 /*	max-width: 600px;*/
 	margin: 100px auto 0;
@@ -332,13 +358,62 @@ td {
 	display: inline-block;
 }
 
-.contact-section2 {
-	background-color: var(--secondary-color-lighter);
-	max-width: 300px;
-	border-radius: 10px;
-	padding-bottom: 5px;
+/*start grid fallback*/
+.contact-section2__item {
+	display: inline-block;
+	/*font-family: 'Fredoka One', cursive;*/
+	width: auto;
 	margin: 10px auto;
+	padding: auto;
 }
+/*end grid fallback*/
+
+@supports (display: grid) {
+	.contact-section2 {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 0px;
+		max-width: 500px;
+		margin: 20px auto;
+		background-color: var(--primary-color-lighter);
+		padding: 0px auto;
+		border-radius: 10px;
+	}
+
+	.contact-section2_item {
+		width: auto;
+		min-height: auto;
+		margin: auto;
+	
+	}
+}
+
+/* responsive styling for contact section 2 grid */
+@media all and (max-width: 500px) {
+	.contact-section2 {
+		grid-template-columns: 1fr;
+	}
+}
+@media all and (min-width: 500px) and (max-width: 750px) {
+	.contact-section2 {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+@media all and (max-width:  750px){
+	.contact-section2 {
+		grid-gap:  10px;
+	}
+	.contact-section2__item:last-child {
+		grid-column: auto / auto;
+		grid-row:  auto / auto;
+	}
+}
+
+.contact-section2__heading {
+	font-family: 'Fredoka One', cursive;
+}
+
+
 
 section {
 	margin: 100px 5px 5px; 
@@ -346,30 +421,6 @@ section {
 
 #work {
 	text-align: center;
-}
-
-/* responsive styling for work grid */
-@media all and (max-width: 500px) {
-	.grid {
-		grid-template-columns: 1fr;
-	}
-}
-@media all and (min-width: 500px) and (max-width: 750px){
-	.grid {
-		grid-template-columns: 1fr 1fr;
-	}
-}
-@media all and (max-width:  750px){
-	.grid {
-		grid-gap:  10px;
-	}
-	.grid__item:last-child {
-		grid-column: auto / auto;
-		grid-row:  auto / auto;
-	}
-	h3 {
-		font-size:  20px;
-	}
 }
 
 /* animation for Mississauga skyline svg */
@@ -469,7 +520,7 @@ nav.container
 
 nav.container a
 {
-    color: #0078b2;
+    color: var(--primary-color-darker);
     text-decoration: none;
     font: 'Fredoka One', cursive;
     margin: 0px 10px;
@@ -545,6 +596,10 @@ nav.pullUpDown a:hover:before, nav.pullUpDown a:hover:after
 
 #download-button:visited {
 	color: var(--button-text-color);
+}
+
+#intro {
+	font-family: 'Fredoka One', cursive;
 }
 
 
