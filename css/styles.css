@@ -303,7 +303,7 @@ input[type="submit"]:hover, input[type=submit]:focus {
 	margin: 2px;
 }
 
-.about-list__item-odd:hover, about-list__item-odd:focus {
+.about-list__item-odd:hover, .about-list__item-odd:focus {
 	background-color: inherit;
 }
 
@@ -314,7 +314,7 @@ input[type="submit"]:hover, input[type=submit]:focus {
 	margin: 2px;
 }
 
-.about-list__item-even:hover, about-list__item-even:focus {
+.about-list__item-even:hover, .about-list__item-even:focus {
 	background-color: inherit;
 }
 
