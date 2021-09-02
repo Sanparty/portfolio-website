@@ -238,7 +238,7 @@ input[type="submit"]:hover, input[type=submit]:focus {
 		width: auto;
 		min-height: auto;
 		margin: 0;
-		padding: 5px;
+		padding: 0px 5px 10px;
 		border-radius: 10px;
 	}
 
@@ -252,7 +252,7 @@ input[type="submit"]:hover, input[type=submit]:focus {
 		width: auto;
 		min-height: auto;
 		margin: 0;
-		padding: 5px;
+		padding: 0px 5px 10px;
 		border-radius: 10px;
 	}
 }
