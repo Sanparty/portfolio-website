@@ -602,6 +602,23 @@ nav.pullUpDown a:hover:before, nav.pullUpDown a:hover:after
 	font-family: 'Fredoka One', cursive;
 }
 
+.workgrid-github-link {
+	text-decoration: none;
+	background-color: var(--background-color);
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.workgrid-github-link:hover, .workgrid-github-link:focus {
+	opacity: 0.8;
+}
+
+
+.workgrid-github-link:visited {
+	color: var(--primary-color-darker);
+}
+
+
 
 
 
