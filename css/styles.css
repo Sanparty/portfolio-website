@@ -597,6 +597,11 @@ nav.pullUpDown a:hover:before, nav.pullUpDown a:hover:after
 	color: var(--button-text-color);
 }
 
+#codelink-button, #codelink-button:visited {
+	color: var(--button-text-color);
+	text-align: center;
+}
+
 #intro {
 	font-family: 'Fredoka One', cursive;
 }
