@@ -17,6 +17,7 @@ Secondary Color: grey;
 	--button-text-color: white;
 	--button-border-radius: 10px;
 	--responsive-margin-top: 235px;
+	--responsive-margin-top-large: 300px;
 }
 
 * {
@@ -640,6 +641,22 @@ nav.pullUpDown a:hover::after {
 		margin-left: 0;
 		padding-left: 0;
 		width: 100%;
+	}
+
+	section {
+		margin-top: var(--responsive-margin-top-large);
+	}
+
+    .profile {
+		margin-top: var(--responsive-margin-top-large);
+	}
+
+	.about {
+		margin-top: var(--responsive-margin-top-large);
+	}
+
+	.contact {
+		margin-top: var(--responsive-margin-top-large);
 	}
 }
 
