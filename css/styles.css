@@ -646,6 +646,7 @@ nav.pullUpDown a:hover::after {
 	section {
 		margin-top: var(--responsive-margin-top-large);
 	}
+	
 
     .profile {
 		margin-top: var(--responsive-margin-top-large);
