@@ -638,7 +638,7 @@ nav.pullUpDown a:hover::after {
 	.navigation-list li {
 		display: flex;
 		flex-direction: column;
-		margin-left: -4%;
+		margin-left: -20px;
 		padding-left: 0;
 		width: 100%;
 	}
@@ -646,7 +646,7 @@ nav.pullUpDown a:hover::after {
 	#logo_dsp {
 		max-height: 55px;
 		max-width: 200px;
-		margin-left: -4%;
+		margin-left: -20px;
 	}
 
 	section {
