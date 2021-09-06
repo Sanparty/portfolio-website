@@ -616,6 +616,33 @@ nav.pullUpDown a:hover::after {
 	}
 }
 
+@media only screen and (max-width: 500px) {
+	.page-header {
+		display: block;
+		width: 100%;
+		padding: auto;
+		position: fixed;
+		top: 0;
+		background-color: var(--background-color);
+		z-index: 9999;
+		margin: auto;
+		text-align: center;
+	}
+
+	.page-header__item:last-child {
+		width: 100%;
+		text-align: center;
+	}
+
+	.navigation-list li {
+		display: flex;
+		flex-direction: column;
+		margin-left: 0;
+		padding-left: 0;
+		width: 100%;
+	}
+}
+
 #career-foundry:visited {
 	color: var(--text-color);
 }
