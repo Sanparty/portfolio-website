@@ -254,7 +254,7 @@ input[type=submit]:focus {
 		width: auto;
 		min-height: auto;
 		margin: 0;
-		padding: 0 5px 10px;
+		padding: 0px 10px 10px;
 		border-radius: 10px;
 	}
 
@@ -268,7 +268,7 @@ input[type=submit]:focus {
 		width: auto;
 		min-height: auto;
 		margin: 0;
-		padding: 0 5px 10px;
+		padding: 0px 10px 10px;
 		border-radius: 10px;
 	}
 }
@@ -685,9 +685,11 @@ nav.pullUpDown a:hover::after {
 }
 
 .workgrid-github-link {
+	display: inline-flex;
 	text-decoration: none;
 	background-color: var(--background-color);
 	padding: 5px;
+	margin: 5px 0;
 	border-radius: 5px;
 }
 
