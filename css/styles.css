@@ -370,10 +370,7 @@ td {
 }
 
 .contact {
-	max-width: 700px;
 	margin: 100px auto 0;
-	text-align: center;
-	padding: 0;
 }
 
 .contact-message {
@@ -584,6 +581,83 @@ nav.pullUpDown a:hover::after {
 	height: 100%;
 }
 
+#career-foundry:visited {
+	color: var(--text-color);
+}
+
+#download-button:visited {
+	color: var(--button-text-color);
+}
+
+#codelink-button,
+#codelink-button:visited {
+	color: var(--button-text-color);
+	text-align: center;
+}
+
+#intro {
+	font-family: 'Fredoka One', cursive;
+}
+
+.workgrid-github-link {
+	display: inline-flex;
+	text-decoration: none;
+	background-color: var(--background-color);
+	padding: 5px;
+	margin: 5px 0;
+	border-radius: 5px;
+}
+
+.workgrid-github-link:hover,
+.workgrid-github-link:focus {
+	opacity: 0.8;
+}
+
+.workgrid-github-link:visited {
+	color: var(--primary-color-darker);
+}
+
+.contact-form__container {
+	display: flex;
+	justify-content: center;
+}
+
+.contact-form {
+	width: 400px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.standard-label {
+	width: 100px;
+	align-self: flex-start;
+	justify-content: flex-end;
+	margin: 10px 0;
+	padding-right: 10px;
+}
+
+#contact-name,
+#contact-email,
+#contact-tel,
+#contact-message {
+	width: 290px;
+	margin: 5px 0;
+	padding: 5px;
+}
+
+#send-message {
+	flex: stretch;
+	width: 150px;
+	margin: 20px 0;
+	justify-content: center;
+}
+
+#contact-me {
+	text-align: center;
+}
+
 /* navigation responsive styling */
 
 @media only screen and (max-width: 715px) {
@@ -673,40 +747,9 @@ nav.pullUpDown a:hover::after {
 		margin: auto;
 		border-radius: 50%;
 	}
-}
 
-#career-foundry:visited {
-	color: var(--text-color);
-}
-
-#download-button:visited {
-	color: var(--button-text-color);
-}
-
-#codelink-button,
-#codelink-button:visited {
-	color: var(--button-text-color);
-	text-align: center;
-}
-
-#intro {
-	font-family: 'Fredoka One', cursive;
-}
-
-.workgrid-github-link {
-	display: inline-flex;
-	text-decoration: none;
-	background-color: var(--background-color);
-	padding: 5px;
-	margin: 5px 0;
-	border-radius: 5px;
-}
-
-.workgrid-github-link:hover,
-.workgrid-github-link:focus {
-	opacity: 0.8;
-}
-
-.workgrid-github-link:visited {
-	color: var(--primary-color-darker);
+	.standard-label {
+		width: 290px;
+		margin: 0;
+	}
 }
