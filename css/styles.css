@@ -752,3 +752,11 @@ nav.pullUpDown a:hover::after {
 		margin: 0;
 	}
 }
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+    border-style: inset;
+    border-width: 1px;
+}
