@@ -646,6 +646,14 @@ nav.pullUpDown a:hover::after {
 	padding: 5px;
 }
 
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+    border-style: inset;
+    border-width: 1px;
+}
+
 #send-message {
 	flex: stretch;
 	width: 150px;
@@ -753,10 +761,4 @@ nav.pullUpDown a:hover::after {
 	}
 }
 
-input[type=text],
-input[type=email],
-input[type=tel],
-textarea {
-    border-style: inset;
-    border-width: 1px;
-}
+
