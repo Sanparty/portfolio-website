@@ -380,8 +380,6 @@ td {
 /* start grid fallback */
 .contact-section2__item {
 	display: inline-block;
-
-	/* font-family: 'Fredoka One', cursive; */
 	width: auto;
 	margin: 10px auto;
 	padding: auto;
@@ -399,6 +397,7 @@ td {
 		background-color: var(--primary-color-lighter);
 		padding: 0 auto;
 		border-radius: 10px;
+		text-align: center;
 	}
 
 	.contact-section2_item {
