@@ -759,6 +759,9 @@ textarea {
 		width: 290px;
 		margin: 0;
 	}
+
+	.hide {
+    display: none;
+  	}
+
 }
-
-
