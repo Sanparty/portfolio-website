@@ -598,7 +598,8 @@ nav.pullUpDown a:hover::after {
 	font-family: 'Fredoka One', cursive;
 }
 
-.workgrid-github-link {
+.workgrid-github-link,
+.workgrid-website-link {
 	display: inline-flex;
 	text-decoration: none;
 	background-color: var(--background-color);
@@ -608,12 +609,25 @@ nav.pullUpDown a:hover::after {
 }
 
 .workgrid-github-link:hover,
-.workgrid-github-link:focus {
+.workgrid-github-link:focus,
+.workgrid-website-link:hover,
+.workgrid-website-link:focus {
 	opacity: 0.8;
 }
 
-.workgrid-github-link:visited {
+.workgrid-github-link:visited,
+.workgrid-website-link:visited {
 	color: var(--primary-color-darker);
+}
+
+.workgrid-website-link:hover {
+
+}
+
+.portfolio-links {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
 }
 
 .contact-form__container {
@@ -663,6 +677,24 @@ textarea {
 
 #contact-me {
 	text-align: center;
+}
+
+.portfolio-logo {
+	-webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease 0s;
+}
+
+.portfolio-logo:hover,
+.portfolio-logo:focus {
+	opacity: 0.8;
+	filter: saturate(200%);
+	-webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2;
+    transform: scale(1.2);
+  	cursor: pointer;
 }
 
 /* navigation responsive styling */
