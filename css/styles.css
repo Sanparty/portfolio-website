@@ -616,6 +616,12 @@ nav.pullUpDown a:hover::after {
 	color: var(--primary-color-darker);
 }
 
+.portfolio-links {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
 .contact-form__container {
 	display: flex;
 	justify-content: center;
@@ -663,6 +669,18 @@ textarea {
 
 #contact-me {
 	text-align: center;
+}
+
+.portfolio-logo {
+    transition: all 0.2s ease 0s;
+}
+
+.portfolio-logo:hover,
+.portfolio-logo:focus {
+	opacity: 0.8;
+	filter: saturate(200%);
+    transform: scale(1.2);
+  	cursor: pointer;
 }
 
 /* navigation responsive styling */
@@ -763,5 +781,4 @@ textarea {
 	.hide {
     display: none;
   	}
-
 }
