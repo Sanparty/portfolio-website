@@ -144,6 +144,7 @@ input[type=submit]:focus {
 
 .navigation-list__item {
 	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
 	font-weight: 500;
 	font-size: 18px;
 	text-decoration: none;
