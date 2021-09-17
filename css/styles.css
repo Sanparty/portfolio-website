@@ -16,8 +16,8 @@ Secondary Color: grey;
 	--secondary-color-lighter: lightgray;
 	--button-text-color: white;
 	--button-border-radius: 10px;
-	--responsive-margin-top: 235px;
-	--responsive-margin-top-large: 300px;
+	--responsive-margin-top: 0;
+	--responsive-margin-top-large: 10px;
 }
 
 * {
@@ -85,7 +85,8 @@ button {
 
 	/* takes the font from the outer container */
 
-	font-family: inherit;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 400;
 
 	/* styles the button */
 	background-color: var(--primary-color);
@@ -115,7 +116,8 @@ input[type="submit"] {
 	border: none;
 
 	/* takes the font from the outer container */
-	font-family: inherit;
+	font-family: 'Oswald', sans-serif;
+	font-weight:  400;
 
 	/* styles the background color, font color, and text decoration (underline, etc.) of the button */
 	background-color: var(--primary-color);
@@ -141,12 +143,16 @@ input[type=submit]:focus {
 }
 
 .navigation-list__item {
-	font-family: 'Fredoka One', cursive;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 500;
+	font-size: 18px;
 	text-decoration: none;
 }
 
 .navigation-list__item--active {
-	font-family: 'Fredoka One', cursive;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 500;
+	font-size: 18px;
 	text-decoration: none;
 	background: var(--primary-color-lighter);
 }
@@ -432,7 +438,9 @@ td {
 }
 
 .contact-section2__heading {
-	font-family: 'Fredoka One', cursive;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 400;
+	font-size: 17px;
 }
 
 section {
@@ -683,10 +691,74 @@ textarea {
   	cursor: pointer;
 }
 
+#logo_dsp_menubar {
+	max-height: 30px;
+	align-self: center;
+	padding: 0;
+	margin: 0;
+}
+
+/* Style the navigation menu */
+.topnav {
+  overflow: hidden;
+  background-color: var(--primary-color-lighter);
+  position: relative;
+/*  border-bottom: solid;
+  border-color: var(--secondary-color);*/
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: var(--primary-color);
+  padding: 10px 10px;
+  font-family: 'Oswald', sans-serif;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: var(--primary-color-lighter);
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  background-color: var(--background-color);
+  color: var(--secondary-color);
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: var(--primary-color-lighter);
+  color: white;
+}
+
+.topnav {
+	display: none;
+}
+
 /* navigation responsive styling */
 
 @media only screen and (max-width: 715px) {
-	.navigation-list li {
+
+	.topnav {
+	display: inherit;
+	}	
+
+	.page-header {
+	display:  none;
+	}
+/*	.navigation-list li {
 		display: flex;
 		flex-direction: column;
 		margin: initial;
@@ -698,7 +770,7 @@ textarea {
 	.page-header {
 		background-color: var(--background-color);
 		border-bottom: 1px var(--secondary-color) solid;
-	}
+	} */
 
 	section {
 		margin-top: var(--responsive-margin-top);
@@ -718,7 +790,7 @@ textarea {
 }
 
 @media only screen and (max-width: 500px) {
-	.page-header {
+	/*.page-header {
 		display: block;
 		width: 100%;
 		padding: auto;
@@ -747,7 +819,7 @@ textarea {
 		max-height: 55px;
 		max-width: 200px;
 		margin-left: -20px;
-	}
+	}*/
 
 	section {
 		margin-top: var(--responsive-margin-top-large);
