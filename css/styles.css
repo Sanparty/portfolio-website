@@ -117,7 +117,7 @@ input[type="submit"] {
 
 	/* takes the font from the outer container */
 	font-family: 'Oswald', sans-serif;
-	font-weight:  400;
+	font-weight: 400;
 
 	/* styles the background color, font color, and text decoration (underline, etc.) of the button */
 	background-color: var(--primary-color);
@@ -245,6 +245,13 @@ input[type=submit]:focus {
 .grid__item {
 	display: inline-block;
 	width: 33%;
+	background-color: var(--secondary-color-lighter);
+}
+
+.grid__item-blue {
+	display: inline-block;
+	width: 33%;
+	background-color: var(--primary-color-lighter);
 }
 
 /* end grid fallback */
@@ -385,11 +392,18 @@ td {
 }
 
 /* start grid fallback */
+.contact-section2 {
+	text-align: center;
+	background-color: var(--primary-color-lighter);
+	border-radius: 10px;
+}
+
 .contact-section2__item {
 	display: inline-block;
 	width: auto;
-	margin: 10px auto;
+	margin: 10px;
 	padding: auto;
+	text-align: center;
 }
 
 /* end grid fallback */
@@ -704,8 +718,9 @@ textarea {
   overflow: hidden;
   background-color: var(--primary-color-lighter);
   position: relative;
+
 /*  border-bottom: solid;
-  border-color: var(--secondary-color);*/
+  border-color: var(--secondary-color); */
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
@@ -716,7 +731,7 @@ textarea {
 /* Style navigation menu links */
 .topnav a {
   color: var(--primary-color);
-  padding: 10px 10px;
+  padding: 10px;
   font-family: 'Oswald', sans-serif;
   text-decoration: none;
   font-size: 17px;
@@ -751,14 +766,14 @@ textarea {
 /* navigation responsive styling */
 
 @media only screen and (max-width: 715px) {
-
 	.topnav {
 	display: inherit;
-	}	
+	}
 
 	.page-header {
-	display:  none;
+	display: none;
 	}
+
 /*	.navigation-list li {
 		display: flex;
 		flex-direction: column;
@@ -791,7 +806,7 @@ textarea {
 }
 
 @media only screen and (max-width: 500px) {
-	/*.page-header {
+	/* .page-header {
 		display: block;
 		width: 100%;
 		padding: auto;
@@ -820,7 +835,7 @@ textarea {
 		max-height: 55px;
 		max-width: 200px;
 		margin-left: -20px;
-	}*/
+	} */
 
 	section {
 		margin-top: var(--responsive-margin-top-large);
