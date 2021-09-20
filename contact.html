@@ -5,7 +5,8 @@
 	<title>Get Touch With DSP</title>
 	<link rel="shortcut icon" href="./img/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">	
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/style.production.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- 	<link rel="stylesheet" href="css/font-awesome.min.css"> -->
 	<link rel="preconnect" href="https://fonts.googleapis.com"> 
@@ -58,13 +59,13 @@
 	<div class="contact">
 		<h1 id="contact-me">Contact Me</h1>
 			<div class="contact-form__container">
-				<form action="#" method="post" class="contact-form">
+				<form method="post" action="contact-form-process.php" class="contact-form">
 	 				<label class="standard-label" for="contact-name">Name:</label>
 	  				<input type="text" id="contact-name" name="contact-name">
 	  				<label class="standard-label" for="contact-email">*E-mail:</label>
 	  				<input type="email" id="contact-email"  name="contact-email" required>
-	  				<label class="standard-label" for="contact-tel">Telephone:</label>
-					<input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="contact-tel" name="contact-tel" value="xxx-xxx-xxxx">
+	  			<!-- 	<label class="standard-label" for="contact-tel">Telephone:</label>
+					<input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="contact-tel" name="contact-tel" value="xxx-xxx-xxxx"> -->
 					<label class="standard-label" for="contact-message">*Message:</label>
 	  				<textarea maxlength="240" id="contact-message" name="contact-message" rows="5" cols="30" required></textarea>
 	  				<input type="submit" id="send-message" aria-label="Send Message" value="Send Message">
