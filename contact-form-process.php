@@ -70,6 +70,7 @@ if (isset($_POST['contact-email'])) {
     <!-- include your success message below -->
 
     <h1>Thank you for contacting us. We will be in touch with you very soon.</h1>
+    <a href="index.html">Home</a>
 
 <?php
 }
