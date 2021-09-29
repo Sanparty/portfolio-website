@@ -244,13 +244,13 @@ input[type=submit]:focus {
 /* start grid fallback */
 .grid__item {
 	display: inline-block;
-	width: 33%;
+	width: 495px;
 	background-color: var(--secondary-color-lighter);
 }
 
 .grid__item-blue {
 	display: inline-block;
-	width: 33%;
+	width: 495px;
 	background-color: var(--primary-color-lighter);
 }
 
@@ -805,6 +805,10 @@ textarea {
 		margin-top: var(--responsive-margin-top);
 	}
 
+	.about-bio {
+		padding: 10px;
+	}
+
 	.contact {
 		margin-top: var(--responsive-margin-top);
 	}
@@ -854,7 +858,6 @@ textarea {
 
 	.about {
 		margin-top: var(--responsive-margin-top-large);
-		padding: 10px;
 	}
 
 	.contact {
