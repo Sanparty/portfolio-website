@@ -275,16 +275,23 @@ input[type=submit]:focus {
 }
 
 /* start grid fallback */
+
+.grid {
+	margin: 0 auto;
+}
+
 .grid__item {
 	display: inline-block;
 	width: 495px;
 	background-color: lightgray;
+	padding: 10px;
 }
 
 .grid__item-blue {
 	display: inline-block;
 	width: 495px;
 	background-color: lightblue;
+	padding: 10px;
 }
 
 /* end grid fallback */
