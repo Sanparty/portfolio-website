@@ -1,0 +1,177 @@
+/*
+Colors used
+
+Text Color (Dark Slate Blue): #483D8B;
+Primary Color (light blue): #0078b2;
+Secondary Color: grey;
+*/
+
+:root {
+	--primary-color: black;
+	--secondary-color: gray;
+	--text-color: black;
+	--background-color: lightblue;
+	--primary-color-lighter: lightblue;
+	--primary-color-darker: #005f8f;
+	--secondary-color-lighter: lightgray;
+	--button-text-color: white;
+	--button-border-radius: 10px;
+	--responsive-margin-top: 235px;
+	--responsive-margin-top-large: 300px;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: var(--background-color);
+	color: var(--text-color);
+
+	/*	font-family: 'Overpass Mono', monospace; */
+
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+
+	/* sets the font size to 16px */
+
+	line-height: 1.4;
+
+	/* sets the line height to 1.4 */
+}
+
+h1 {
+	font-family: 'Fredoka One', cursive;
+	font-size: 35px;
+	color: var(--primary-color);
+}
+
+h2 {
+	font-size: 30px;
+	font-weight: 700;
+}
+
+h3 {
+	font-size: 25px;
+	font-weight: 700;
+}
+
+a {
+	color: var(--text-color);
+	text-decoration: none;
+
+}
+
+a:visited {
+	/* visited link */
+	color: var(--text0cikir);
+}
+
+a:hover,
+a:focus {
+	/* no underlining  when hovering over a link */
+	text-decoration: none;
+}
+
+.web-text:hover,
+.web-text:focus {
+	/* no underlining  when hovering over a link */
+	
+	border-style: double;
+	border-color: black;
+	border-radius: 10px;
+
+}
+
+.video-text:hover,
+.video-text:focus {
+	/* no underlining  when hovering over a link */
+
+		border-style: double;
+	border-color: black;
+	border-radius: 10px;
+	
+}
+
+a:active {
+	/* selected link */
+	color: var(--primary-color);
+}
+
+.main-page {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: black
+
+}
+.main-logo {
+	text-align: center;
+	margin: 200px 0 10px;
+
+	width: auto;
+
+/*	border-style: double;
+	border-color: black;*/
+
+}
+
+.main-text {
+	display: flex;
+    justify-content: space-around;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 400;
+	font-size: 20px;
+	margin: 0 auto 200px;
+	width: 200px;
+
+
+}
+
+.video-text,
+.web-text {
+	margin: 10px;
+	padding: 5px;
+	border-style: double;
+	border-color: lightblue;
+	border-radius: 10px;
+
+}
+
+.page-footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+/*	text-align: center;*/
+	margin: 0 auto;
+	width: 200px;
+}
+
+.social-media_logo:hover,
+.social-media_logo:focus {
+	/* lets the mouse appears as a hand when hovering over the button */
+	cursor: pointer;
+
+  /* reduces the opacity of the button to 80% */
+	opacity: 0.8;
+	filter: /*drop-shadow(2px 2px 2px black)*/ saturate(200%);
+}
+
+#logo_dsp {
+	max-height: 55px;
+	max-width: 200px;
+
+
+/*	#find-me-on {
+    font-family: 'Oswald', sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: var(--primary-color);
+	font-size: 20px;
+	margin: 10px;
+}*/
+}
+
