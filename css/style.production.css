@@ -399,6 +399,11 @@ input[type=submit]:focus {
 	background-color: inherit;
 }
 
+.about-bio {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
 .experience {
 	max-width: 800px;
 	margin: 0 auto;
@@ -1027,10 +1032,12 @@ textarea {
     .profile {
 		margin-top: 10px;
 		text-align: center;
+		padding: 10px;
 	}
 
 	.about {
 		margin-top: 10px;
+		padding: 10px;
 	}
 
 	.contact {
