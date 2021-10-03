@@ -57,6 +57,14 @@ h3 {
 	font-weight: 700;
 }
 
+h4 {
+	font-family: 'Oswald', sans-serif;
+	font-weight: 500;
+	font-size: 25px;
+	margin-bottom: 10px;
+	margin-top: 0;
+}
+
 a {
 	color: var(--text-color);
 }
@@ -178,16 +186,21 @@ input[type=submit]:focus {
 }
 
 .profile {
+	display: flex;
 	max-width: 700px;
+	align-items: center;
 	margin: 100px auto 0;
-	padding: 0;
+	padding: 0 20px 20px;
 }
 
 .profile__portrait {
-	float: left;
 	max-width: 200px;
 	margin-right: 40px;
 	border-radius: 50%;
+}
+
+.profile__text {
+	text-align: center;
 }
 
 .page-header {
@@ -241,6 +254,12 @@ input[type=submit]:focus {
 	max-width: 200px;
 }
 
+#dsp-website-capture,
+#dansp-website-capture {
+	flex-shrink: 1;
+	width: auto;
+}
+
 /* start grid fallback */
 
 .grid {
@@ -272,6 +291,8 @@ input[type=submit]:focus {
 	}
 
 	.grid__item {
+		display: flex;
+		flex-direction: column;
 		background-color: var(--secondary-color-lighter);
 		width: auto;
 		min-height: auto;
@@ -286,6 +307,8 @@ input[type=submit]:focus {
 	}
 
 	.grid__item-blue {
+		display: flex;
+		flex-direction: column;
 		background-color: var(--primary-color-lighter);
 		width: auto;
 		min-height: auto;
@@ -858,6 +881,7 @@ textarea {
 	}
 
     .profile {
+    flex-direction: column;
 		margin-top: var(--responsive-margin-top-large);
 		text-align: center;
 		padding: 10px;
