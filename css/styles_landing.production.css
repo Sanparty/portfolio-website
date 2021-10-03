@@ -1,4 +1,11 @@
 /*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+/*
 Colors used
 
 Text Color (Dark Slate Blue): #483D8B;
@@ -6,29 +13,16 @@ Primary Color (light blue): #0078b2;
 Secondary Color: grey;
 */
 
-:root {
-	--primary-color: black;
-	--secondary-color: gray;
-	--text-color: black;
-	--background-color: lightblue;
-	--primary-color-lighter: lightblue;
-	--primary-color-darker: #005f8f;
-	--secondary-color-lighter: lightgray;
-	--button-text-color: white;
-	--button-border-radius: 10px;
-	--responsive-margin-top: 235px;
-	--responsive-margin-top-large: 300px;
-}
-
 * {
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
 
 body {
-	background-color: var(--background-color);
-	color: var(--text-color);
+	background-color: lightblue;
+	color: black;
 
 	/*	font-family: 'Overpass Mono', monospace; */
 
@@ -46,7 +40,7 @@ body {
 h1 {
 	font-family: 'Fredoka One', cursive;
 	font-size: 35px;
-	color: var(--primary-color);
+	color: black;
 }
 
 h2 {
@@ -60,13 +54,13 @@ h3 {
 }
 
 a {
-	color: var(--text-color);
+	color: black;
 	text-decoration: none;
 }
 
 a:visited {
 	/* visited link */
-	color: var(--text0cikir);
+	color: undefined;
 }
 
 a:hover,
@@ -78,6 +72,8 @@ a:focus {
 .web-text:hover,
 .web-text:focus {
 	/* no underlining  when hovering over a link */
+	-webkit-transition: 0.3s ease;
+	-o-transition: 0.3s ease;
 	transition: 0.3s ease;
 	opacity: 1;
 	border-style: double;
@@ -88,6 +84,8 @@ a:focus {
 .video-text:hover,
 .video-text:focus {
 	/* no underlining  when hovering over a link */
+	-webkit-transition: 0.3s ease;
+	-o-transition: 0.3s ease;
 	transition: 0.3s ease;
 	opacity: 1;
 	border-style: double;
@@ -97,13 +95,20 @@ a:focus {
 
 a:active {
 	/* selected link */
-	color: var(--primary-color);
+	color: black;
 }
 
 .main-page {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	color: black;
 }
 
@@ -114,8 +119,11 @@ a:active {
 }
 
 .main-text {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 	font-family: 'Oswald', sans-serif;
 	font-weight: 400;
 	font-size: 20px;
@@ -140,6 +148,8 @@ a:active {
 
 .video-text,
 .web-text {
+	-webkit-transition: 0.3s ease;
+	-o-transition: 0.3s ease;
 	transition: 0.3s ease;
 	margin: 10px;
 	padding: 5px;
@@ -150,9 +160,16 @@ a:active {
 }
 
 .page-footer {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	margin: 0 auto;
 	width: 200px;
 }
@@ -164,7 +181,8 @@ a:active {
 
   /* reduces the opacity of the button to 80% */
 	opacity: 0.8;
-	filter: /*drop-shadow(2px 2px 2px black)*/ saturate(200%);
+	-webkit-filter: /*drop-shadow(2px 2px 2px black)*/ saturate(200%);
+	        filter: /*drop-shadow(2px 2px 2px black)*/ saturate(200%);
 }
 
 #logo_dsp {
@@ -173,39 +191,55 @@ a:active {
 }
 
 .middle {
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
   transition: 0.5s ease;
   opacity: 0;
   position: absolute;
-  transform: translate(5px, +150px);
+  -webkit-transform: translate(5px, +150px);
+      -ms-transform: translate(5px, +150px);
+          transform: translate(5px, +150px);
   text-align: center;
 }
 
 .video-middle {
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
   transition: 0.5s ease;
   opacity: 0;
   position: absolute;
-  transform: translate(-75px, +150px);
+  -webkit-transform: translate(-75px, +150px);
+      -ms-transform: translate(-75px, +150px);
+          transform: translate(-75px, +150px);
   text-align: center;
 }
 
 .web-text:hover .middle {
   opacity: 1;
-  transform: translate(5px, +25px);
+  -webkit-transform: translate(5px, +25px);
+      -ms-transform: translate(5px, +25px);
+          transform: translate(5px, +25px);
 }
 
 .video-text:hover .video-middle {
   opacity: 1;
-  transform: translate(-75px, +25px);
+  -webkit-transform: translate(-75px, +25px);
+      -ms-transform: translate(-75px, +25px);
+          transform: translate(-75px, +25px);
 }
 
 .web-text:focus .middle {
   opacity: 1;
-  transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 .video-text:focus .video-middle {
   opacity: 1;
-  transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 .text {
