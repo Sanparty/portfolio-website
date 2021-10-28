@@ -181,13 +181,18 @@ a:active {
   transition: all 0.5s ease;
 }
 
+/* .main-text,
+.main-logo,
+.social-media {
+  background-color: black;
+} */
+
 @media only screen and (max-width: 500px) {
   .main-text {
     flex-direction: column;
     align-items: center;
     margin: 0 auto 100px;
     max-width: 500px;
-    /* background-color: black; */
   }
   /* .main-text,
   .main-logo,
@@ -202,7 +207,6 @@ a:active {
 
   .main-logo,
   .social-media {
-    /* background-color: black; */
     max-width: 500px;
   }
   /* .social-media {
