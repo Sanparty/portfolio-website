@@ -183,11 +183,17 @@ a:active {
 
 @media only screen and (max-width: 500px) {
   .main-text {
+    flex-direction: column;
+    align-items: center;
     margin: 0 auto 100px;
     max-width: 500px;
     /* background-color: black; */
   }
-
+  /* .main-text,
+  .main-logo,
+  .social-media {
+    background-color: black;
+  } */
   .text {
     opacity: 1;
     transform: uppercase;
