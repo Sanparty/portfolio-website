@@ -112,8 +112,8 @@ a:active {
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: 20px;
-  margin: 0 auto 100px;
-  max-width: 500px;
+  margin: 0 auto 200px;
+  width: auto;
   transition: all 0.5s ease;
 }
 
@@ -125,6 +125,7 @@ a:active {
 .video-text,
 .web-text {
   display: flex;
+  flex-shrink: 1;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -135,7 +136,7 @@ a:active {
   border-color: lightblue;
   border-radius: 10px;
   opacity: 1;
-  width: 50%;
+  width: 200px;
 }
 
 #web_image,
@@ -149,7 +150,7 @@ a:active {
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  max-width: 400px;
+  max-width: 1000px;
 }
 .social-media_logo {
   transition: opacity 1s ease;
