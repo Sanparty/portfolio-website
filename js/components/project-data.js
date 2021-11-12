@@ -30,7 +30,7 @@ const quizTimer = new Project(
 
     I was searching for a timer online to use during the test, as it was a timed test with a set amount of questions. I wanted to follow how much time I had remaining but also at what pace I was finishing questions.<br><br>
     
-    This was very good practice in coding in JavaScript. I hope to continue to polish the website and eventually add some nicer styling.This is my current Video Editing Portfolio. Utilizing JavaScript, CSS and HTML to showcase my editing and producing skills.`,
+    This was very good practice in coding in JavaScript.`,
     "https://github.com/Sanparty/Quiz-Timer",
     "http://dansanpedro.com/quiztimer",
     "img/quiz_timer_square.png"
