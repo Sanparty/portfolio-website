@@ -1,7 +1,7 @@
 /*
 * Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.3.6,
-* Autoprefixer: v10.3.1
+* PostCSS: v8.4.12,
+* Autoprefixer: v10.4.4
 * Browsers: last 4 version
 */
 
@@ -27,6 +27,18 @@ body {
   line-height: 1.4;
 
   /* sets the line height to 1.4 */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 h1 {
@@ -131,6 +143,8 @@ a:active {
   text-align: center;
   margin: 200px 0 10px;
   width: auto;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
 }
 
 .main-text {
@@ -190,28 +204,39 @@ a:active {
   -webkit-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease;
+  -webkit-transform: scale(1,0);
+      -ms-transform: scale(1,0);
+          transform: scale(1,0);
 }
 
-.page-footer {
+/* .page-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1000px;
+} */
+
+.social-media {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0 auto;
-  max-width: 1000px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .social-media_logo {
-  -webkit-transition: opacity 1s ease;
-  -o-transition: opacity 1s ease;
-  transition: opacity 1s ease;
+  -webkit-transition: opacity, -webkit-transform 1s ease;
+  transition: opacity, -webkit-transform 1s ease;
+  -o-transition: opacity, transform 1s ease;
+  transition: opacity, transform 1s ease;
+  transition: opacity, transform 1s ease, -webkit-transform 1s ease;
   opacity: 0;
+  margin: 0 .3rem;
+  -webkit-transform: scale(0,1);
+      -ms-transform: scale(0,1);
+          transform: scale(0,1);
 }
 
 .social-media_logo:hover {
@@ -244,6 +269,9 @@ a:active {
   -o-transition: all 1s ease;
   transition: all 1s ease;
   opacity: 0;
+  -webkit-transform: scale(0.75);
+      -ms-transform: scale(0.75);
+          transform: scale(0.75);
 }
 
 .text {
@@ -296,10 +324,10 @@ a:active {
     width: 100%;
   }
 
-  .main-logo,
+  /* .main-logo,
   .social-media {
     max-width: 500px;
-  }
+  } */
 
   .main-logo {
     margin-top: 100px;
