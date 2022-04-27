@@ -5,6 +5,7 @@ let mainlogo = document.getElementById("logo_dsp");
 
 window.onload = function(){
     mainlogo.style.opacity = 1;
+    mainlogo.style.transform = "scale(1, 1)";
     };
 
 
@@ -31,15 +32,20 @@ const logos  = () => {
 
 window.onload = function(){
     mainlogo.style.opacity = 1;
+    mainlogo.style.transform = "scale(1, 1)";
+
    
     setTimeout(function() {
         webimage.style.opacity = 1;
         videoimage.style.opacity = 1;
+        webimage.style.transform = "scale(1, 1)";
+        videoimage.style.transform = "scale(1, 1)";
       }, 1000);
 
     setTimeout(function() {
         for (i = 0; i < socialmedia.length; i++) {
             socialmedia[i].style.opacity = 1;
+            socialmedia[i].style.transform = "scale(1,1)";
           }
       }, 2000);
  
