@@ -60,6 +60,7 @@ a:active {
   margin: 200px 0 10px;
   width: auto;
   flex-shrink: 1;
+  transform: translate(-7px, 0px);
 }
 .main-text {
   display: flex;
@@ -113,7 +114,7 @@ a:active {
   cursor: pointer;
   /* reduces the opacity of the button to 80% */
   opacity: 0.8;
-  filter: drop-shadow(2px 2px 2px black) saturate(300%);
+  filter: saturate(300%);
   border-bottom: double #005f8f;
 }
 #logo_dsp {
@@ -125,7 +126,7 @@ a:active {
   transform: scale(0.75);
 }
 #logo_dsp:hover {
-  filter: drop-shadow(2px 2px 2px black) saturate(300%);
+  filter: saturate(300%);
 }
 .text {
   color: #005f8f;
