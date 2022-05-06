@@ -20,7 +20,7 @@ const editPortfolio = new Project(
     "DSP Video Editing Portfolio",
     "This is my current Video Editing Portfolio. Utilizing JavaScript, CSS and HTML to showcase my editing and producing skills.",
     "https://github.com/Sanparty/editing-portfolio-website",
-    "http://dansanpedro.com/dspeditor/index.html",
+    "http://edit.dansanpedro.com/index.html",
     "img/editing_portfolio_square.png"
 );
 
