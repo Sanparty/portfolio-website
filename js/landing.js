@@ -21,7 +21,7 @@ const logos  = () => {
     webtext.innerHTML = `<a href="index.html" class="web-link" target="_blank"><img src="img/web_icon_50.svg" id="web_image" alt="Web Development"></a>
     `;
 
-    videotext.innerHTML = `<a href="http://dansanpedro.com/dspeditor/index.html" class="video-link" target="_blank"><img src="img/video_editing_icon.svg" id="video_image" alt="Video Editing"></a>
+    videotext.innerHTML = `<a href="http://edit.dansanpedro.com" class="video-link" target="_blank"><img src="img/video_editing_icon.svg" id="video_image" alt="Video Editing"></a>
     `;
     let webimage = document.getElementById("web_image");
     let videoimage = document.getElementById("video_image");
