@@ -1,0 +1,193 @@
+@primaryColor: black;
+@secondaryColor: gray;
+@textColor: black;
+@backgroundColor: lightblue;
+@primaryColorDarker: #005f8f;
+@primaryColorLighter: lightblue;
+@primaryFont: "Oswald", sans-serif;
+@secondaryFont: "Overpass Mono", monospace;
+@dropShadow: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+@saturate: saturate(300%);
+@border: double;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: @backgroundColor;
+    color: @textColor;
+    font-family: @primaryFont;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+a {
+    color: @textColor;
+    text-decoration: none;
+}
+
+a:visited {
+    color: @textColor
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+.web-text:hover,
+.web-text:focus {
+    /* no underlining  when hovering over a link */
+    transition: 0.3s ease;
+    opacity: 1;
+    border-style: @border;
+    border-color: @primaryColorDarker;
+    border-radius: 10px;
+}
+
+.video-text:hover,
+.video-text:focus {
+    /* no underlining  when hovering over a link */
+    transition: 0.3s ease;
+    opacity: 1;
+    border-style: @border;
+    border-color: @primaryColorDarker;
+    border-radius: 10px;
+}
+
+a:active {
+    /* selected link */
+    color: @primaryColor;
+}
+
+.main-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: @primaryColor;
+}
+
+.main-logo {
+    text-align: center;
+    margin: 200px 0 10px;
+    width: auto;
+    flex-shrink: 1;
+    transform: translate(-7px, 0px);
+}
+
+.main-text {
+    display: flex;
+    justify-content: center;
+    font-family: @primaryFont;
+    font-weight: 400;
+    font-size: 20px;
+    margin: 0 auto 200px;
+    width: auto;
+    transition: all 0.5s ease;
+}
+
+.logo-text {
+    margin: 0 auto 200px;
+    text-align: center;
+}
+
+.video-text,
+.web-text {
+    display: flex;
+    flex-shrink: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    margin: 10px;
+    padding: 5px;
+    border-style: @border;
+    border-color: @primaryColorLighter;
+    border-radius: 10px;
+    opacity: 1;
+    width: 200px;
+}
+
+#web_image,
+#video_image {
+    opacity: 0;
+    transition: all 1s ease;
+    transform: scale(1, 0);
+}
+
+
+.social-media {
+    display: flex;
+    justify-content: center;
+}
+
+.social-media_logo {
+    transition: opacity, transform 1s ease;
+    opacity: 0;
+    margin: 0 .3rem;
+    transform: scale(0, 1);
+}
+
+.social-media_logo:hover,
+.social-media_logo:focus {
+    /* lets the mouse appears as a hand when hovering over the button */
+    cursor: pointer;
+
+    /* reduces the opacity of the button to 80% */
+    opacity: 0.8;
+    filter: @saturate;
+    border-bottom: @border @primaryColorDarker;
+}
+
+#logo_dsp {
+    text-align: center;
+    max-height: 55px;
+    max-width: 200px;
+    transition: transform 1s ease;
+    opacity: 0;
+    transform: scale(0.75);
+}
+#logo_dsp:hover {
+    filter: @saturate;
+}
+
+.text {
+    color: @primaryColorDarker;
+    text-align: center;
+    transform: uppercase;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+
+@media only screen and (max-width: 500px) {
+    .main-text {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto 50px;
+        max-width: 500px;
+    }
+
+    .text {
+        opacity: 1;
+        transform: uppercase;
+    }
+
+    .video-text,
+    .web-text {
+        width: 100%;
+    }
+
+    .main-logo {
+        margin-top: 100px;
+    }
+}

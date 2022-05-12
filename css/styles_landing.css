@@ -1,101 +1,53 @@
-:root {
-  --primary-color: black;
-  --secondary-color: gray;
-  --text-color: black;
-  --background-color: lightblue;
-  --primary-color-lighter: lightblue;
-  --primary-color-darker: #005f8f;
-  --secondary-color-lighter: lightgray;
-  --button-text-color: white;
-  --button-border-radius: 10px;
-  --responsive-margin-top: 235px;
-  --responsive-margin-top-large: 300px;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
 body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-
-  /*	font-family: 'Overpass Mono', monospace; */
-
-  font-family: "Raleway", sans-serif;
+  background-color: lightblue;
+  color: black;
+  font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: 16px;
-
-  /* sets the font size to 16px */
-
   line-height: 1.4;
-
-  /* sets the line height to 1.4 */
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
 }
-
-h1 {
-  font-family: "Fredoka One", cursive;
-  font-size: 35px;
-  color: var(--primary-color);
-}
-
-h2 {
-  font-size: 30px;
-  font-weight: 700;
-}
-
-h3 {
-  font-size: 25px;
-  font-weight: 700;
-}
-
 a {
-  color: var(--text-color);
+  color: black;
   text-decoration: none;
 }
-
 a:visited {
-  /* visited link */
-  color: var(--text0cikir);
+  color: black;
 }
-
 a:hover,
 a:focus {
-  /* no underlining  when hovering over a link */
   text-decoration: none;
 }
-
 .web-text:hover,
 .web-text:focus {
   /* no underlining  when hovering over a link */
   transition: 0.3s ease;
   opacity: 1;
   border-style: double;
-  border-color: var(--primary-color-darker);
+  border-color: #005f8f;
   border-radius: 10px;
 }
-
 .video-text:hover,
 .video-text:focus {
   /* no underlining  when hovering over a link */
   transition: 0.3s ease;
   opacity: 1;
   border-style: double;
-  border-color: var(--primary-color-darker);
+  border-color: #005f8f;
   border-radius: 10px;
 }
-
 a:active {
   /* selected link */
-  color: var(--primary-color);
+  color: black;
 }
-
 .main-page {
   display: flex;
   flex-direction: column;
@@ -103,14 +55,13 @@ a:active {
   align-items: center;
   color: black;
 }
-
 .main-logo {
   text-align: center;
   margin: 200px 0 10px;
   width: auto;
   flex-shrink: 1;
+  transform: translate(-7px, 0px);
 }
-
 .main-text {
   display: flex;
   justify-content: center;
@@ -121,12 +72,10 @@ a:active {
   width: auto;
   transition: all 0.5s ease;
 }
-
 .logo-text {
   margin: 0 auto 200px;
   text-align: center;
 }
-
 .video-text,
 .web-text {
   display: flex;
@@ -143,68 +92,49 @@ a:active {
   opacity: 1;
   width: 200px;
 }
-
 #web_image,
 #video_image {
   opacity: 0;
   transition: all 1s ease;
-  transform: scale(1,0);
+  transform: scale(1, 0);
 }
-
-/* .page-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto;
-  max-width: 1000px;
-} */
-
 .social-media {
   display: flex;
   justify-content: center;
 }
-
 .social-media_logo {
   transition: opacity, transform 1s ease;
   opacity: 0;
-  margin: 0 .3rem;
-  transform: scale(0,1);
+  margin: 0 0.3rem;
+  transform: scale(0, 1);
 }
-
 .social-media_logo:hover,
 .social-media_logo:focus {
   /* lets the mouse appears as a hand when hovering over the button */
   cursor: pointer;
-
   /* reduces the opacity of the button to 80% */
   opacity: 0.8;
-  filter: /*drop-shadow(2px 2px 2px black)*/ saturate(300%);
-  border-bottom: double var(--primary-color-darker);
+  filter: saturate(300%);
+  border-bottom: double #005f8f;
 }
-
 #logo_dsp {
   text-align: center;
   max-height: 55px;
   max-width: 200px;
-  transition: all 1s ease;
+  transition: transform 1s ease;
   opacity: 0;
   transform: scale(0.75);
 }
-
+#logo_dsp:hover {
+  filter: saturate(300%);
+}
 .text {
-  color: var(--primary-color-darker);
+  color: #005f8f;
   text-align: center;
   transform: uppercase;
   opacity: 0;
   transition: all 0.5s ease;
 }
-
-/* .main-text,
-.main-logo,
-.social-media {
-  background-color: black;
-} */
-
 @media only screen and (max-width: 500px) {
   .main-text {
     flex-direction: column;
@@ -212,29 +142,14 @@ a:active {
     margin: 0 auto 50px;
     max-width: 500px;
   }
-
-  /* .main-text,
-  .main-logo,
-  .social-media {
-    background-color: black;
-  } */
   .text {
     opacity: 1;
     transform: uppercase;
-
-    /* font-size: 15px; */
   }
-
   .video-text,
   .web-text {
     width: 100%;
   }
-
-  /* .main-logo,
-  .social-media {
-    max-width: 500px;
-  } */
-
   .main-logo {
     margin-top: 100px;
   }
