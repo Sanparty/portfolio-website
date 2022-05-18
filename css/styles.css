@@ -286,29 +286,25 @@ input[type="submit"]:focus {
   margin: 0 auto;
 }
 
-.about-list__item-odd {
+.about-list li {
+  border-radius: 5px;
+  padding: 5px;
+  margin: 2px;
+}
+
+.about-list li:nth-child(odd) {
   background-color: var(--secondary-color-lighter);
-  border-radius: 5px;
-  padding: 5px;
-  margin: 2px;
 }
 
-.about-list__item-odd:hover,
-.about-list__item-odd:focus {
-  background-color: inherit;
-}
 
-.about-list__item-even {
+.about-list li:nth-child(even) {
   background-color: var(--primary-color-lighter);
-  border-radius: 5px;
-  padding: 5px;
-  margin: 2px;
 }
-
-.about-list__item-even:hover,
-.about-list__item-even:focus {
+.about-list li:hover,
+.about-list li:focus {
   background-color: inherit;
 }
+
 
 .about-bio {
   max-width: 600px;
