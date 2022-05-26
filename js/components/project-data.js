@@ -25,19 +25,28 @@ const editPortfolio = new Project(
 );
 
 const quizTimer = new Project(
-    "Quiz Timer DSP - JavaScript coding practice",
-    `I created this small web application after taking an assessment test for a position in Web Development training at my current company.<br><br>
-
-    I was searching for a timer online to use during the test, as it was a timed test with a set amount of questions. I wanted to follow how much time I had remaining but also at what pace I was finishing questions.<br><br>
-    
-    This was very good practice in coding in JavaScript.`,
+    "Quiz Timer DSP",
+    `I created this small web application after searching for a timer online to use during the test. I wanted to follow how much time I had remaining and also the pace I was keeping.`,
     "https://github.com/Sanparty/Quiz-Timer",
     "http://dansanpedro.com/quiztimer",
     "img/quiz_timer_square.png"
 );
 
+// OLD QUIZ TIMER DESCRIPTION
+// const quizTimer = new Project(
+//     "Quiz Timer DSP - JavaScript coding practice",
+//     `I created this small web application after taking an assessment test for a position in Web Development training at my current company.<br><br>
+
+//     I was searching for a timer online to use during the test, as it was a timed test with a set amount of questions. I wanted to follow how much time I had remaining but also at what pace I was finishing questions.<br><br>
+    
+//     This was very good practice in coding in JavaScript.`,
+//     "https://github.com/Sanparty/Quiz-Timer",
+//     "http://dansanpedro.com/quiztimer",
+//     "img/quiz_timer_square.png"
+// );
+
 const editwpPortfolio= new Project(
-    "DSP Video Editing Portfolio - WordPress version",
+    "DSP Video Editing Portfolio",
     `This is a WordPress themed website I created in 2014 to showcase my video editing portfolio. I had completed two courses at Camptech and this was the resulting project.`,
     "none",
     "http://dansp.ca",

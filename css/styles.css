@@ -260,17 +260,7 @@ input[type="submit"]:focus {
   flex-shrink: 1;
   width: auto;
 }
-.project__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* background-color: var(--secondary-color-lighter); */
-  width: 30%;
-  min-height: auto;
-  margin: 10px;
-  padding: 10px 10px;
-  border-radius: 10px;
-}
+
 
 .about {
   margin: 100px auto 0;
@@ -605,17 +595,12 @@ nav.pullUpDown a:hover::after {
   /* border-radius: 10px;
   border-style: ridge; */
   padding: 5px 5px;
-  filter: drop-shadow(-5px -5px 0.5rem var(--secondary-color));
+  border: solid 1px #fff;
+  /* filter: drop-shadow(-5px -5px 0.1rem var(--secondary-color)); */
   z-index: 1;
 }
 
-.project__info {
-  background-color: rgba(255, 255, 255, 0.9);
-  /* border-radius: 10px; */
-  /* border-style: ridge; */
-  padding: 10px 10px;
-  filter: drop-shadow(-5px -5px 0.5rem var(--secondary-color));
-}
+
 
 .contact-form__container {
   display: flex;
@@ -690,27 +675,68 @@ textarea {
   margin: 100px auto 0px;
 }
 
-.project_image {
-  width: 100%;
-  flex-shrink: 1;
-  filter: drop-shadow(-5px -5px 0.5rem var(--secondary-color));
-  transition: all 0.5s ease;
-  transform: scale(0.95);
-  /* border-radius: 10px; */
-}
-
-.project_image:hover,
-.project_image:focus {
-  transform: scale(1);
-
-  /* border-radius: 10px; */
-}
 .projects {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  margin: 0 auto;
+  justify-content: center;
 }
+
+
+.project {
+  background-color: transparent;
+  height: 300px;
+  width: 300px;
+  perspective: 1000px;
+}
+
+.project_inner  {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+
+.project_info {
+  background-color: rgba(0, 95, 143, 0.95);
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 10px 10px;
+  transform: rotateY(180deg);
+}
+
+
+.project_front,
+.project_info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* .screenshot {
+  max-width: 300px;
+  flex-shrink: 1;
+
+  transition: all 1s ease;
+
+} */
+
+
+
+.project_image {
+  max-width: 300px;
+  flex-shrink: 1;
+  transition: all 1s ease;
+}
+
+.project:hover .project_inner {
+  transform: rotateY(180deg);
+}
+
+
 .project__description {
   display: block;
 }
@@ -770,7 +796,7 @@ textarea {
   .topnav {
     display: inherit;
   }
-  .project__item {
+  .project_item {
     width: 33%;
   }
   .page-header {
@@ -841,7 +867,7 @@ textarea {
     display: none;
   }
 
-  .project__item {
+  .project_item {
     width: 100%;
   }
 }
