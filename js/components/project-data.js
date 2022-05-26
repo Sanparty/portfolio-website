@@ -46,7 +46,7 @@ const quizTimer = new Project(
 // );
 
 const editwpPortfolio= new Project(
-    "DSP Video Editing Portfolio",
+    "DSP Video Editing Portfolio - WordPress version",
     `This is a WordPress themed website I created in 2014 to showcase my video editing portfolio. I had completed two courses at Camptech and this was the resulting project.`,
     "none",
     "http://dansp.ca",
