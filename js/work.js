@@ -14,7 +14,7 @@ const projectList = projectObjectArray.map((project) => {
       </div>
   
       <div class="project_info">
-        <h3 class="project__name">${project.projectName}</h3>
+        <h4 class="project__name">${project.projectName}</h4>
         <p class="project__description">${project.description}</p>
         <div class="portfolio-links">
           <a href="${project.livesiteLink}" target="_blank" class="portfolio-logo"><img src="img/2305615_address_globe_internet_network_site_icon.svg" alt="Check out the live website" ></a>
@@ -30,7 +30,7 @@ const projectList = projectObjectArray.map((project) => {
     </div>
 
     <div class="project_info">
-      <h3 class="project__name">${project.projectName}</h3>
+      <h4 class="project__name">${project.projectName}</h4>
       <p class="project__description">${project.description}</p>
       <div class="portfolio-links">
         <a href="${project.githubLink}" target="_blank" class="portfolio-logo"><img src="img/1298743_github_git_logo_social_icon.svg" alt="See my project on Github" ></a>

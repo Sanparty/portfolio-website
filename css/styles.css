@@ -592,12 +592,10 @@ nav.pullUpDown a:hover::after {
   width: 50%;
   justify-content: space-evenly;
   background-color: var(--primary-color-lighter);
-  /* border-radius: 10px;
-  border-style: ridge; */
   padding: 5px 5px;
   border: solid 1px #fff;
-  /* filter: drop-shadow(-5px -5px 0.1rem var(--secondary-color)); */
-  z-index: 1;
+  border-radius: 5px;
+  margin: 0 auto;
 }
 
 
@@ -699,13 +697,15 @@ textarea {
 
 
 .project_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: rgba(0, 95, 143, 0.95);
   color: #fff;
   font-size: 0.9rem;
   padding: 10px 10px;
   transform: rotateY(180deg);
 }
-
 
 .project_front,
 .project_info {
