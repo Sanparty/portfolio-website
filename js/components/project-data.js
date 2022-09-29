@@ -55,7 +55,7 @@ const editwpPortfolio= new Project(
 
 
 
-const projectObjectArray = [webPortfolio, editPortfolio, annWebsite, quizTimer, editwpPortfolio];
+const projectObjectArray = [webPortfolio, editPortfolio, annWebsite, quizTimer];
 
 // Export the array to be used in other files
 export default projectObjectArray;
