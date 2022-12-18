@@ -202,7 +202,8 @@ Secondary Color: grey;
 	padding: 5px;
   }
   
-  #career-foundry {
+  #career-foundry,
+  #bell-u {
 	font-family: "Fredoka One", cursive;
   }
   
@@ -712,7 +713,8 @@ Secondary Color: grey;
 	height: 100%;
   }
   
-  #career-foundry:visited {
+  #career-foundry:visited,
+  #bell-u:visited {
 	color: #483f8b;
   }
   

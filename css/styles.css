@@ -181,7 +181,8 @@ input[type="submit"]:focus {
   padding: 5px;
 }
 
-#career-foundry {
+#career-foundry,
+#bell-u {
   font-family: "Fredoka One", cursive;
 }
 
@@ -360,7 +361,7 @@ td {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 0;
-    max-width: 500px;
+    max-width: 750px;
     margin: 20px auto;
     background-color: var(--primary-color-lighter);
     padding: 0 auto;
@@ -550,7 +551,8 @@ nav.pullUpDown a:hover::after {
   height: 100%;
 }
 
-#career-foundry:visited {
+#career-foundry:visited,
+#bell-u:visited {
   color: var(--text-color);
 }
 
