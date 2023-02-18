@@ -1,0 +1,7 @@
+RewriteEngine On 
+RewriteCond %{SERVER_PORT} 80
+RewriteCond %{HTTP_HOST} ^(www\.)?dansanpedro\.com
+RewriteRule ^(.*)$ https://www.dansanpedro.com/$1 [R,L]
+
+#Alternate default index pages
+DirectoryIndex landing.html staytuned.html index.html
