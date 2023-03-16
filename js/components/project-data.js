@@ -44,7 +44,7 @@ const editwpPortfolio= new Project(
 const johnSite = new Project(
     "John Manucdoc, Broker",
     `Working on a refreshed website for a real estate broker. Early stages of design in 2023 using the Vue.js framework.`,
-    "none",
+    "https://github.com/Sanparty/jmanucdoc-vue",
     "https://dansanpedro.com/john",
     "img/john_square.png"
 );
