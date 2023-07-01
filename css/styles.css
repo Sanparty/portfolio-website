@@ -658,8 +658,8 @@ textarea {
 .portfolio-logo:hover,
 .portfolio-logo:focus {
   opacity: 0.8;
-  filter: saturate(200%);
-  transform: scale(1.2);
+  filter: saturate(500%);
+  filter: grayscale(100%);
   cursor: pointer;
 }
 
@@ -702,8 +702,10 @@ textarea {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgba(0, 95, 143, 0.95);
-  color: #fff;
+  align-content: center;
+  align-items: center;
+  background-color: rgba(191, 194, 196, 0.55);
+  color: var(--primary-color-darker);
   font-size: 0.9rem;
   padding: 10px 10px;
   transform: rotateY(180deg);
@@ -717,6 +719,7 @@ textarea {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
+
 
 /* .screenshot {
   max-width: 300px;
