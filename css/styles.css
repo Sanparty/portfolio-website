@@ -651,15 +651,21 @@ textarea {
   text-align: center;
 }
 
-.portfolio-logo {
+.portfolio-logo1,
+.portfolio-logo2 {
   transition: all 0.2s ease 0s;
+  transform: scale(0.8);
+  width: 50%;
 }
 
-.portfolio-logo:hover,
-.portfolio-logo:focus {
+.portfolio-logo1:hover,
+.portfolio-logo2:hover,
+.portfolio-logo1:focus,
+.portfolio-logo2:focus {
   opacity: 0.8;
   filter: saturate(200%);
-  transform: scale(1.2);
+  filter: invert(50%);
+  transform: scale(1);
   cursor: pointer;
 }
 
@@ -700,10 +706,13 @@ textarea {
 
 .project_info {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  background-color: rgba(0, 95, 143, 0.95);
-  color: #fff;
+  align-content: center;
+  align-items: center;
+  background-color: rgba(191, 194, 196, 0.55);
+  color: var(--primary-color-darker);
   font-size: 0.9rem;
   padding: 10px 10px;
   transform: rotateY(180deg);
@@ -717,7 +726,9 @@ textarea {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
-
+.portfolio-link-width {
+  width: 25%;
+}
 /* .screenshot {
   max-width: 300px;
   flex-shrink: 1;
