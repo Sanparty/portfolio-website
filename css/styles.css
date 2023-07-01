@@ -651,21 +651,15 @@ textarea {
   text-align: center;
 }
 
-.portfolio-logo1,
-.portfolio-logo2 {
+.portfolio-logo {
   transition: all 0.2s ease 0s;
-  transform: scale(0.8);
-  width: 50%;
 }
 
-.portfolio-logo1:hover,
-.portfolio-logo2:hover,
-.portfolio-logo1:focus,
-.portfolio-logo2:focus {
+.portfolio-logo:hover,
+.portfolio-logo:focus {
   opacity: 0.8;
-  filter: saturate(200%);
-  filter: invert(50%);
-  transform: scale(1);
+  filter: saturate(500%);
+  filter: grayscale(100%);
   cursor: pointer;
 }
 
@@ -706,8 +700,7 @@ textarea {
 
 .project_info {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
   align-items: center;
@@ -726,9 +719,8 @@ textarea {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
-.portfolio-link-width {
-  width: 25%;
-}
+
+
 /* .screenshot {
   max-width: 300px;
   flex-shrink: 1;

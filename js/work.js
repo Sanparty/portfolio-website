@@ -17,7 +17,7 @@ const projectList = projectObjectArray.map((project) => {
         <h4 class="project__name">${project.projectName}</h4>
         <p class="project__description">${project.description}</p>
         <div>
-          <a href="${project.livesiteLink}" target="_blank" class="portfolio-logo1"><img src="img/2305615_address_globe_internet_network_site_icon.svg" alt="Check out the live website" ></a>
+          <a href="${project.livesiteLink}" target="_blank" class="portfolio-logo"><img src="img/2305615_address_globe_internet_network_site_icon.svg" alt="Check out the live website" ></a>
         </div>
       </div>
     </div>
@@ -31,13 +31,14 @@ const projectList = projectObjectArray.map((project) => {
 
     <div class="project_info">
       <h4 class="project__name">${project.projectName}</h4>
+      <div class="portfolio-link-width">  
+      <a href="${project.livesiteLink}" target="_blank" class="portfolio-logo"><img src="img/2305615_address_globe_internet_network_site_icon.svg" alt="Check out the live website" ></a>
+    </div>
       <p class="project__description">${project.description}</p>
       <div class="portfolio-link-width">
-        <a href="${project.githubLink}" target="_blank" class="portfolio-logo1"><img src="img/1298743_github_git_logo_social_icon.svg" alt="See my project on Github" ></a>
+        <a href="${project.githubLink}" target="_blank" class="portfolio-logo"><img src="img/1298743_github_git_logo_social_icon.svg" alt="See my project on Github" ></a>
       </div>
-      <div class="portfolio-link-width">  
-        <a href="${project.livesiteLink}" target="_blank" class="portfolio-logo2"><img src="img/2305615_address_globe_internet_network_site_icon.svg" alt="Check out the live website" ></a>
-      </div>
+     
     </div>
   </div>   
     
