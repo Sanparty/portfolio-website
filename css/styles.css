@@ -1,11 +1,3 @@
-/*
-Colors used
-
-Text Color (Dark Slate Blue): #483D8B;
-Primary Color (light blue): #0078b2;
-Secondary Color: grey;
-*/
-
 :root {
   --primary-color: #0078b2;
   --secondary-color: gray;
@@ -27,18 +19,10 @@ Secondary Color: grey;
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-
-  /*	font-family: 'Overpass Mono', monospace; */
-
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 16px;
-
-  /* sets the font size to 16px */
-
   line-height: 1.4;
-
-  /* sets the line height to 1.4 */
 }
 
 h1 {
@@ -70,40 +54,29 @@ a {
 }
 
 a:visited {
-  /* visited link */
   color: var(--secondary-color);
 }
 
 a:hover,
 a:focus {
-  /* no underlining  when hovering over a link */
   text-decoration: none;
 }
 
 a:active {
-  /* selected link */
   color: var(--primary-color);
 }
 
 .button,
 button {
-  /* overwrites browser defaults and resets the border */
   border: none;
   display: inline-block;
-
-  /* takes the font from the outer container */
-
   font-family: "Oswald", sans-serif;
   font-weight: 400;
-
-  /* styles the button */
   background-color: var(--primary-color);
   color: var(--button-text-color);
   text-decoration: none;
   padding: 10px;
   border-radius: var(--button-border-radius);
-
-  /* width of the border, type, color */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   transition: 0.2s opacity;
 }
@@ -112,41 +85,26 @@ button:hover,
 button:focus,
 .button:hover,
 .button:focus {
-  /* lets the mouse appears as a hand when hovering over the button */
   cursor: pointer;
-
-  /* reduces the opacity of the button to 80% */
   opacity: 0.8;
 }
 
 input[type="submit"] {
-  /* overwrites browser defaults and resets the border */
   border: none;
-
-  /* takes the font from the outer container */
   font-family: "Oswald", sans-serif;
   font-weight: 400;
-
-  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
   background-color: var(--primary-color);
   color: var(--button-text-color);
   text-decoration: none;
-
-  /* adds spacing to the button (this will be discussed more in-depth later) */
   padding: 10px;
   border-radius: var(--button-border-radius);
-
-  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   transition: 0.2s opacity;
 }
 
 input[type="submit"]:hover,
 input[type="submit"]:focus {
-  /* lets the mouse appears as a hand when hovering over the button */
   cursor: pointer;
-
-  /* reduces the opacity of the button to 80% */
   opacity: 0.8;
 }
 
@@ -243,10 +201,7 @@ input[type="submit"]:focus {
 
 .social-media_logo:hover,
 .social-media_logo:focus {
-  /* lets the mouse appears as a hand when hovering over the button */
   cursor: pointer;
-
-  /* reduces the opacity of the button to 80% */
   opacity: 0.8;
   filter: /*drop-shadow(2px 2px 2px black)*/ saturate(200%);
 }
@@ -605,6 +560,8 @@ nav.pullUpDown a:hover::after {
 .contact-form__container {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contact-form {
@@ -720,17 +677,6 @@ textarea {
   -webkit-backface-visibility: hidden;
 }
 
-
-/* .screenshot {
-  max-width: 300px;
-  flex-shrink: 1;
-
-  transition: all 1s ease;
-
-} */
-
-
-
 .project_image {
   max-width: 300px;
   flex-shrink: 1;
@@ -795,6 +741,18 @@ textarea {
   display: none;
 }
 
+#result_good,
+#result_bad {
+  max-width: 400px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+.nodisplay {
+  display: none;
+}
+
 /* navigation responsive styling */
 
 @media only screen and (min-width: 1125px) {
@@ -803,8 +761,6 @@ textarea {
     width: 80%;
   }
 }
-
-
 
 @media only screen and (max-width: 715px) {
   .topnav {

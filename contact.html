@@ -4,19 +4,50 @@
 	<meta charset="utf-8">
 	<title>Contact Me</title>
 	<link rel="shortcut icon" href="./img/favicon.ico">
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">	
-<!-- 	<link rel="stylesheet" type="text/css" href="css/styles.css"> -->
-	<link rel="stylesheet" type="text/css" href="css/style.production.css">
+	<link rel="stylesheet" type="text/css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/style.production.css"> -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!-- 	<link rel="stylesheet" href="css/font-awesome.min.css"> -->
-	<link rel="preconnect" href="https://fonts.googleapis.com"> 
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-	<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Monoton&family=Overpass+Mono:wght@400;700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&family=Roboto&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Monoton&family=Overpass+Mono:wght@400;700&display=swap"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&family=Roboto&display=swap"
+		rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+	<script type="text/javascript">
+		(function () {
+			// https://dashboard.emailjs.com/admin/account
+			emailjs.init({
+				publicKey: "EVwDPvs94HElj1O62",
+			});
+		})();
+	</script>
+	<script type="text/javascript">
+		window.onload = function () {
+			document.getElementById('contact-form').addEventListener('submit', function (event) {
+				event.preventDefault();
+				// these IDs from the previous steps
+				emailjs.sendForm('jman_web', 'template_e28bu7j', this)
+					.then(() => {
+						console.log('SUCCESS!');
+						var element = document.getElementById("result_good");
+						element.classList.remove("nodisplay");
+					}, (error) => {
+						console.log('FAILED...', error);
+						var element = document.getElementById("result_bad");
+						element.classList.remove("nodisplay");
+					});
+			});
+		}
+	</script>
 	<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
 	<header class="page-header">
 		<img id="logo_dsp" src="img/playlogodsp_new.png" alt="Personal logo of DSP" class="page-header__item">
@@ -31,8 +62,9 @@
 				<li role="presentation">
 					<a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
 				</li>
-			 	<li role="presentation">
-					<a href="contact.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Contact</a>
+				<li role="presentation">
+					<a href="contact.html" role="menuitem"
+						class="navigation-list__item navigation-list__item--active">Contact</a>
 				</li>
 			</ul>
 			<div class="hamburger">
@@ -43,74 +75,54 @@
 		</nav>
 	</header>
 	<div class="topnav">
-  		<a href="index.html" class="active"><img id="logo_dsp_menubar" src="img/playlogodsp_new.png" alt="Personal logo of DSP"></a>
-  		<!-- Navigation links (hidden by default) -->
-  		<div id="myLinks">
-  		<!-- <a href="ann_index.html">HOME</a> -->
-    	<a href="about.html">ABOUT ME</a>
-    	<a href="work.html">WORK</a>
-    	<a href="contact.html">CONTACT</a>
-  		</div>
- <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-  		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    	<i class="fa fa-bars"></i>
-  		</a>
+		<a href="index.html" class="active"><img id="logo_dsp_menubar" src="img/playlogodsp_new.png"
+				alt="Personal logo of DSP"></a>
+		<!-- Navigation links (hidden by default) -->
+		<div id="myLinks">
+			<!-- <a href="ann_index.html">HOME</a> -->
+			<a href="about.html">ABOUT ME</a>
+			<a href="work.html">WORK</a>
+			<a href="contact.html">CONTACT</a>
+		</div>
+		<!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			<i class="fa fa-bars"></i>
+		</a>
 	</div>
 	<div class="contact">
 		<h1 id="contact-me">Contact Me</h1>
-			<div class="contact-form__container">
-				<form method="post" action="contact-form-process.php" class="contact-form">
-	 				<label class="standard-label" for="contact-name">Name:</label>
-	  				<input type="text" id="contact-name" name="contact-name">
-	  				<label class="standard-label" for="contact-email">E-mail:</label>
-	  				<input type="email" id="contact-email"  name="contact-email">
-	  			<!-- 	<label class="standard-label" for="contact-tel">Telephone:</label>
-					<input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="contact-tel" name="contact-tel" value="xxx-xxx-xxxx"> -->
-					<label class="standard-label" for="contact-message">Message:</label>
-	  				<textarea maxlength="240" id="contact-message" name="contact-message" rows="5" cols="30"></textarea>
-	  				<input type="submit" id="send-message" aria-label="Send Message" value="Send Message">
-				</form>
+		<div class="contact-form__container">
+			<form id="contact-form" class="contact-form">
+				<label class="standard-label" for="lastname">Name:</label>
+				<input type="text" id="contact-name" name="lastName">
+				<label class="standard-label" for="emailAddress">E-mail:</label>
+				<input type="email" id="contact-email" name="emailAddress">
+				<label class="standard-label" for="comment">Message:</label>
+				<textarea maxlength="240" id="contact-message" name="comment" rows="5" cols="30"></textarea>
+				<input type="submit" id="send-message" aria-label="Send Message" value="Send Message">
+			</form>
+			<div>
+				<div id="result_good" class="nodisplay">Your message has been received. Thanks for contacting me.</div>
+				<div id="result_bad" class="nodisplay">Sorry, your message did not send correctly. Please try again
+					later.
+				</div>
 			</div>
-				<!-- <form action="#" method="post" id="contact-form">
-	 				<label class="standard-label" for="contact-name">Name:</label>
-	  				<input type="text" id="contact-name" name="contact-name"><br><br>
-	  				<label class="standard-label" for="contact-email">*E-mail:</label>
-	  				<input type="email" id="contact-email"  name="contact-email" required><br><br>
-	  				<label class="standard-label" for="contact-tel">Telephone:</label>
-					<input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="contact-tel" name="contact-tel" value="xxx-xxx-xxxx"><br><br>
-					<label class="standard-label" for="contact-message">*Message:</label><br>
-	  				<textarea maxlength="240" id="contact-message" name="contact-message" rows="5" cols="30" required></textarea>
-	  				<br><br>
-	  				<input type="submit" aria-label="Send Message" value="Send Message">
-				</form> -->
-	
-	<!-- 	<div class="contact-section2">
-			<div class="contact-section2__item">
-				<span class="contact-section2__heading">Address:</span><br>
-				24 Grindstone Crt<br>
-				Mississauga, ON<br>
-				L5L 3M4
-			</div>
-			<div class="contact-section2__item">
-				<span class="contact-section2__heading">Telephone:</span><br>
-				<a aria-label="phone" href="tel:647-803-5075">1-647-803-5075</a>
-			</div>
-			<div class="contact-section2__item">
-				<span class="contact-section2__heading">E-mail:</span><br>
-				<a href="mailto:dan@dansp.ca">dansp2021@icloud.com</a>
-			</div>
-		</div> -->
+		</div>
 	</div>
 	<footer class="page-footer">
 		<p id="find-me-on">Find me on</p>
 		<div class="social-media">
-		<a href="https://github.com/Sanparty" target="_blank" class="social-media_logo"><img src="img/1298743_github_git_logo_social_icon.svg" alt="Github" ></a>
-		<a href="https://twitter.com/Sanparty" target="_blank" class="social-media_logo"><img src="img/294709_circle_twitter_icon.svg" alt="Twitter" ></a>
-		<a href="https://www.linkedin.com/in/dsanpedro/" target="_blank" class="social-media_logo"><img src="img/317750_linkedin_icon.svg" alt="Linkedin" ></a>
-		<a href="https://vimeo.com/dansp" target="_blank" class="social-media_logo"><img src="img/381370_logo_vimeo_icon.svg" alt="Vimeo" ></a>
+			<a href="https://github.com/Sanparty" target="_blank" class="social-media_logo"><img
+					src="img/1298743_github_git_logo_social_icon.svg" alt="Github"></a>
+			<a href="https://twitter.com/Sanparty" target="_blank" class="social-media_logo"><img
+					src="img/294709_circle_twitter_icon.svg" alt="Twitter"></a>
+			<a href="https://www.linkedin.com/in/dsanpedro/" target="_blank" class="social-media_logo"><img
+					src="img/317750_linkedin_icon.svg" alt="Linkedin"></a>
+			<a href="https://vimeo.com/dansp" target="_blank" class="social-media_logo"><img
+					src="img/381370_logo_vimeo_icon.svg" alt="Vimeo"></a>
 		</div>
 	</footer>
-	   <script src="js/dan.js"></script>	
-<!-- 	<script src="js/tota11y.min.js"></script> -->
+	<script src="js/dan.js"></script>
 </body>
+
 </html>
