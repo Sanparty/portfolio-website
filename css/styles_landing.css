@@ -102,8 +102,20 @@ a:active {
   display: flex;
   justify-content: center;
 }
+.adapt-badge {
+  text-align: center;
+}
+#adaptlogo {
+  margin-top: 2rem;
+  width: 5rem;
+  opacity: 0;
+  transition: all 1s ease;
+  transform: scale(0.75);
+}
 .social-media_logo {
-  transition: opacity, transform 1s ease;
+  transition:
+    opacity,
+    transform 1s ease;
   opacity: 0;
   margin: 0 0.3rem;
   transform: scale(0, 1);
@@ -138,6 +150,10 @@ a:active {
 .nodisplay {
   display: none;
 }
+/* .page-footer {
+  display: flex;
+  justify-content: center;
+} */
 @media only screen and (max-width: 500px) {
   .main-text {
     flex-direction: column;
